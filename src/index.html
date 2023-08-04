@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2022</title>
+    <style>
+
+  .river {
+    fill: lightskyblue;
+  }
+
+  .road  {
+    fill: lightgray;
+  }
+
+  .key {
+    width:18px;
+    text-align:center;
+    border-radius:3px;
+    background-color:lightgray;
+  }
+    </style>
+  </head>
+  <body>
+    <h1>Frogger</h1>
+    <svg id="svgCanvas" width="600" height="600">
+      <!-- create the moving objects -->
+      <path id="nonTargetArea" fill="yellowgreen" stroke-width="5" d="M0 120 H30 V60 H90 V120 H 150 V60 H210 V120 H270 V60 H330 V120 H390 V60 H450 V120 H510 V60 H570 V120 H600 V0 H0 V0"></path>
+      <g id="targetArea" class="targetArea">
+        <rect id="targetArea1" width="60" height="60" x="30" y="60"></rect>
+        <rect id="targetArea2" width="60" height="60" x="150" y="60"></rect>
+        <rect id="targetArea3" width="60" height="60" x="270" y="60"></rect>
+        <rect id="targetArea4" width="60" height="60" x="390" y="60"></rect>
+        <rect id="targetArea5" width="60" height="60" x="510" y="60"></rect>
+      </g>
+      <rect id="river" class="river" width="600" height="180" x="0" y="120"></rect>
+      <rect id="road" class="road" width="600" height="180" x="0" y="360"></rect>
+
+      <!-- <circle id="frog" class="frog" r="25" cx="300" cy="570"></circle> -->
+    </svg>
+
+    <div id="controls">
+      <h2>Controls:</h2>
+      <table>
+        <tr><td>Move Left</td><td><div id="ArrowLeft" class="key">&#8678;</div></td></tr>
+        <tr><td>Move Right</td><td><div id="ArrowRight" class="key">&#8680;</div></td></tr>
+        <tr><td>Move Forward</td><td><div id="ArrowUp" class="key">&#8679;</div></td></tr>
+        <tr><td>Move Backward</td><td><div id="ArrowDown" class="key">&#8681;</div></td></tr>
+      </table>
+    </div>
+  </body>
+</html>
